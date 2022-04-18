@@ -5,7 +5,7 @@ const fs = require('fs');
 
 const {parse} = require('fast-csv');
 
-whitelist = fs.readFileSync("WL/whitelist.csv").toString().split('\n').map(res => res.replace(/\n|\r/g, ""));
+whitelist = fs.readFileSync("temp/whitelist.csv").toString().split('\n').map(res => res.replace(/\n|\r/g, ""));
 // whitelist = data.split("\n");
 console.log("Length of whitelist is " + whitelist.length);
 
@@ -13,7 +13,7 @@ let start = 1928;
 // let end = 1929;
 let end = 2008;
 
-address = whitelist[387];
+address = whitelist[0];
 console.log(address);
 proof = computeProof(whitelist, address);
 console.log(proof);
